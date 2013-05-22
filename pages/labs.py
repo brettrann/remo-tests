@@ -34,3 +34,4 @@ class Labs(Base):
     @property
     def labs_content(self):
         return self.selenium.find_element(*self._labs_content_locator).text
+
