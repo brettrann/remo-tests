@@ -9,6 +9,7 @@ from unittestzero import Assert
 
 from pages.labs import Labs
 from pages.link_crawler import LinkCrawler
+from pages.labs import Labs
 
 class TestLabsPage:
 
