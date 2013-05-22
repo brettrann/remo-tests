@@ -26,3 +26,4 @@ class Labs(Base):
     @property
     def is_labs_page_text_visible(self):
         return self.find_element(*self._labs_page_text_locator)
+
