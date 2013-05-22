@@ -7,8 +7,8 @@
 import pytest
 from unittestzero import Assert
 
-from pages.link_crawler import LinkCrawler
 from pages.labs import Labs
+from pages.link_crawler import LinkCrawler
 
 
 class TestLabsPage:
