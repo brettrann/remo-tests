@@ -17,7 +17,7 @@ class TestLabsPage:
     def test_labs_page_content(self, mozwebqa):
         labs_page = Labs(mozwebqa)
         labs_page.go_to_labs_page()
-        Assert.true(labs_page.is_labs_page_header_visible.text == 'Labs')
+        Assert.equal(labs_page.is_labs_page_header_visible.text, 'Labs')
         Assert.true(labs_page.is_labs_page_text_visible)
 
     @pytest.mark.skip_selenium
