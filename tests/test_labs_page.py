@@ -16,8 +16,11 @@ class TestLabsPage:
     def test_labs_page_content(self, mozwebqa):
         labs_page = Labs(mozwebqa)
         labs_page.go_to_labs_page()
-        Assert.equal(labs_page.is_labs_page_header_visible.text, 'Labs')
-        Assert.true(labs_page.is_labs_page_text_visible)
+
+        Assert.true(labs_page.is_labs_header_visible)
+        Assert.equal(labs_page.labs_header, 'Labs')
+        Assert.true(labs_page.is_labs_content_visible)
+        Assert.contains(u'Mozilla Reps are strongly encouraged', labs_page.labs_content)
 
     @pytest.mark.skip_selenium
     @pytest.mark.nondestructive
