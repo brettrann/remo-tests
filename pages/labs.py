@@ -12,6 +12,7 @@ from pages.base import Base
 class Labs(Base):
 
     _page_title = 'Mozilla Reps - Labs'
+
     _labs_header_locator = (By.CSS_SELECTOR, 'h1')
     _labs_content_locator = (By.CSS_SELECTOR, 'div.large-6.columns > p')
 
