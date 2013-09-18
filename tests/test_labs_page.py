@@ -10,6 +10,7 @@ from unittestzero import Assert
 from pages.labs import Labs
 from pages.link_crawler import LinkCrawler
 
+
 class TestLabsPage:
 
     @pytest.mark.nondestructive
@@ -20,7 +21,8 @@ class TestLabsPage:
         Assert.true(labs_page.is_labs_header_visible)
         Assert.equal(labs_page.labs_header, 'Labs')
         Assert.true(labs_page.is_labs_content_visible)
-        Assert.contains(u'Mozilla Reps are strongly encouraged', labs_page.labs_content)
+        Assert.contains(u'Mozilla Reps are strongly encouraged',
+            labs_page.labs_content)
 
     @pytest.mark.skip_selenium
     @pytest.mark.nondestructive
@@ -32,4 +34,5 @@ class TestLabsPage:
             'The link crawler did not find any urls to crawl')
 
         all_ok, bad_urls = crawler.verify_status_codes_are_ok(urls)
-        Assert.true(all_ok, '%s bad links found. ' % len(bad_urls) + ', '.join(bad_urls))
+        Assert.true(all_ok,
+            '%s bad links found. ' % len(bad_urls) + ', '.join(bad_urls))
